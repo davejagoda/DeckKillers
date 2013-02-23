@@ -7,5 +7,7 @@ large, memory consumption will increase until the computer becomes
 slow.  A few ways to avoid this:
 
 -redirect large amounts of output to a file
+
 -use "Command K" to clear the scrollback
+
 -quit Terminal
