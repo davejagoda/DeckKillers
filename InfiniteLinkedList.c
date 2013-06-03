@@ -19,7 +19,8 @@ int main(int argc, char **argv)
 {
   nodeType *head = NULL;
   int i = 0;
-  printf("each dot represents a million nodes added to the list\n");
+  setbuf(stdout, NULL); /* unbuffer all output to stdout */
+  printf("each dot represents one million nodes added to the list\n");
   while (1)
     {
       head = insertFirst(head, ++i);
