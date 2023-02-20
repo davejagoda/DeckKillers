@@ -7,6 +7,21 @@
 #include <netdb.h>
 #include <arpa/inet.h>
 
+/*
+  Useful resources:
+  https://beej.us/guide/bgnet/html/split/index.html
+  https://stackoverflow.com/questions/4046616/sockets-how-to-find-out-what-port-and-address-im-assigned
+  https://stackoverflow.com/questions/10758632/how-to-create-a-udp-server-in-c
+
+  Depending on the ulimit of the user running this program, one
+  session may not be enough to exhaust all the ports. To exhaust them
+  all, you can suspend the program and start another. Repeat this
+  until the program can't open any more sockets. Note that once you've
+  exhausted all the ports, the computer will not work work well
+  (e.g. if you exhaust all UDP ports, you won't be able to make a new
+  DNS request). This is a Deck Killer.
+*/
+
 int help()
 {
   printf("options\n");
